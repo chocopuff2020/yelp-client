@@ -19,7 +19,7 @@ $('#search-btn').on('click', function() {
         };
 
         var near = $('#location-input').val();
-        var terms = $('#keyword-input').val();
+        var terms = $('#audio-input').val();
         var accessor = {
             consumerSecret: auth.consumerSecret,
             tokenSecret: auth.accessTokenSecret
@@ -46,7 +46,7 @@ $('#search-btn').on('click', function() {
 
         var parameterMap = OAuth.getParameterMap(message.parameters);
 
- 
+
         $.ajax({
                 'url': message.action,
                 'data': parameterMap,
@@ -91,7 +91,3 @@ $('#search-btn').on('click', function() {
                 console.log('error[' + errorThrown + '], status[' + textStatus + '], jqXHR[' + JSON.stringify(jqXHR) + ']');
             });
 });
-
-
-
-
