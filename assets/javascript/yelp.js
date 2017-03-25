@@ -46,6 +46,7 @@ $('#search-btn').on('click', function() {
 
         var parameterMap = OAuth.getParameterMap(message.parameters);
 
+        document.getElementById('result-container').style.display = "inline-flex";
 
         $.ajax({
                 'url': message.action,
